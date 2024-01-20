@@ -43,8 +43,10 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                 keyboardType: TextInputType.text,
                 style: TextStyle(fontSize: 10),
                 decoration: InputDecoration(
+                    prefixIcon: Image.asset("assets/images/img_a.png"),
                     labelText: 'Email',
                     border: OutlineInputBorder(
+
                         borderRadius: BorderRadius.circular(10))),
               ),
             ),

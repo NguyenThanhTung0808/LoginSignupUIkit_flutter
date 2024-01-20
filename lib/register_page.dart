@@ -58,6 +58,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 keyboardType: TextInputType.text,
                 style: TextStyle(fontSize: 10),
                 decoration: InputDecoration(
+                    prefixIcon: Image.asset("assets/images/img_a.png"),
                     labelText: 'Email',
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10))),
@@ -74,6 +75,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 keyboardType: TextInputType.text,
                 style: TextStyle(fontSize: 10),
                 decoration: InputDecoration(
+                    prefixIcon: Image.asset("assets/images/img_Vector.png"),
                     labelText: 'Your Name',
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10))),
@@ -90,6 +92,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     keyboardType: TextInputType.text,
                     style: TextStyle(fontSize: 10),
                     decoration: InputDecoration(
+                        prefixIcon: Image.asset("assets/images/img_password.png"),
                         labelText: 'Your Password',
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10))))),

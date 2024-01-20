@@ -50,32 +50,73 @@ class _WelcomPageState extends State<WelcomPage> {
               child: Text("Let’s Get Started...",
                   style: TextStyle(
                       fontSize: 17.3170223236084,
-                      fontFamily: 'Inter',
                       fontWeight: FontWeight.w400))),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           Container(
+              width: double.infinity,
+              height: 50,
+              alignment: Alignment.center,
               child: Stack(
-            children: [
-              Padding(
-                  padding: EdgeInsets.only(left: 20),
-                  child: OutlinedButton(
-                    onPressed: () {
-                      debugPrint('Received click');
-                    },
-                    child: const Text(
-                        '                     Continue with Google                        '),
-                  ))
-            ],
-          )),
+                children: [
+                  Positioned(
+                    child: Image.asset(
+                      "assets/images/img_google.png",
+                      width: 160,
+                      height: 45,
+                    ),
+                  ),
+                  Padding(
+                      padding: EdgeInsets.only(left: 5),
+                        child: OutlinedButton(
+                          style: OutlinedButton.styleFrom(
+                            padding: EdgeInsets.only(left:100,right:100),
+                          ),
+                          onPressed: () {
+                            debugPrint('Received click');
+                          },
+                          child: const Text('Continue with Google',style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 15,
+                          ),),
+                        ),
+                      ),
+                ],
+              )
+          ),
+          SizedBox(height: 10),
           Container(
-            child: Padding(
-                padding: EdgeInsets.only(left: 20),
-                child: OutlinedButton(
-                    onPressed: () {
-                      debugPrint('Received click');
-                    },
-                    child: const Text(
-                        '                     Continue with Email                           '))),
+              width: double.infinity,
+              height: 50,
+              alignment: Alignment.center,
+              child: Stack(
+                children: [
+                  Positioned(
+                    right: 20,
+                    child: Image.asset(
+                      "assets/images/img_a.png",
+                      width: 120,
+                      height: 45,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        padding: EdgeInsets.only(left:105,right:105),
+                      ),
+                      onPressed: () {
+                        debugPrint('Received click');
+                      },
+                      child: const Text('Continue with Email',style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15,
+                      ),),
+                    ),
+                  ),
+                ],
+              )
           ),
           SizedBox(height: 10),
           Container(

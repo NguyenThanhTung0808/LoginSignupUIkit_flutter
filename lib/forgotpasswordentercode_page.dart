@@ -44,6 +44,7 @@ class _ForgotPasswordEnterCodeState extends State<ForgotPasswordEnterCode> {
                 keyboardType: TextInputType.text,
                 style: TextStyle(fontSize: 10),
                 decoration: InputDecoration(
+                    prefixIcon: Image.asset("assets/images/img_password.png"),
                     labelText: 'Enter New Password',
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10))),
