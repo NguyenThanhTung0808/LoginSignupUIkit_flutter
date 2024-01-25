@@ -9,7 +9,7 @@ class ForgotPasswordEnterCode extends StatefulWidget {
 }
 
 class _ForgotPasswordEnterCodeState extends State<ForgotPasswordEnterCode> {
-  String enternewpassword = "";
+  String enterNewPassword = "";
 
   @override
   Widget build(BuildContext context) {
@@ -20,29 +20,26 @@ class _ForgotPasswordEnterCodeState extends State<ForgotPasswordEnterCode> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Forgot Password",
+            const Text("Forgot Password",
                 style: TextStyle(
                     color: Colors.blue,
                     fontSize: 32,
                     fontWeight: FontWeight.w700)),
-            SizedBox(height: 10),
-            Container(
-              child: Padding(
+            const SizedBox(height: 10),
+             const Padding(
                 padding: EdgeInsets.only(left: 1),
                 child: Text("set your new password to login intro  "
-                    "              your account!"),
-              ),
-            ),
-            SizedBox(height: 40),
+                    "              your account!"),),
+            const SizedBox(height: 40),
             Padding(
-              padding: EdgeInsets.only(left: 1),
+              padding: const EdgeInsets.only(left: 1),
               child: TextField(
                 onChanged: (newEnterNewPassword) {
                   print(newEnterNewPassword);
-                  enternewpassword = newEnterNewPassword;
+                  enterNewPassword = newEnterNewPassword;
                 },
                 keyboardType: TextInputType.text,
-                style: TextStyle(fontSize: 10),
+                style: const TextStyle(fontSize: 10),
                 decoration: InputDecoration(
                     prefixIcon: Image.asset("assets/images/img_password.png"),
                     labelText: 'Enter New Password',
@@ -50,24 +47,19 @@ class _ForgotPasswordEnterCodeState extends State<ForgotPasswordEnterCode> {
                         borderRadius: BorderRadius.circular(10))),
               ),
             ),
-            SizedBox(height: 30),
-            Container(
-              child: Stack(
-                children: [
+            const SizedBox(height: 30),
+
                   Padding(
-                      padding: EdgeInsets.only(left: 2),
+                      padding: const EdgeInsets.only(left: 2),
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blue, // background
-                          onPrimary: Colors.white, // foreground
+                          foregroundColor: Colors.white,
+                          backgroundColor: Colors.blue, // foreground
                         ),
-                        child: Text('           Confirm           ',
+                        child: const Text('           Confirm           ',
                             style: TextStyle(fontSize: 30)),
                         onPressed: () {},
                       ))
-                ],
-              ),
-            ),
           ],
         ),
       ),

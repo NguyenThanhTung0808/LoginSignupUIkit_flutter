@@ -9,67 +9,59 @@ class RegisterVerificatinonPage extends StatefulWidget {
 }
 
 class _RegisterVerificatinonPageState extends State<RegisterVerificatinonPage> {
-  String verificationcode = "";
+  String veRiFiCationCode = "";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         width: double.maxFinite,
-        padding: EdgeInsets.symmetric(horizontal: 35, vertical: 110),
+        padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 110),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Register",
+              const Text("Register",
                   style: TextStyle(
                       color: Colors.blue,
                       fontSize: 32,
                       fontWeight: FontWeight.w700)),
-              SizedBox(height: 10),
-              Container(
-                child: Padding(
-                  padding: EdgeInsets.only(left: 1),
-                  child: Text("We have sent an email to your email "
-                      "          account with a verification code!"),
-                ),
-              ),
-              SizedBox(height: 40),
-              Padding(
+              const SizedBox(height: 10),
+              const Padding(
                 padding: EdgeInsets.only(left: 1),
+                child: Text("We have sent an email to your email "
+                    "          account with a verification code!"),
+              ),
+              const SizedBox(height: 100),
+              Padding(
+                padding: const EdgeInsets.only(left: 1),
                 child: TextField(
                   onChanged: (newVerificationCode) {
                     print(newVerificationCode);
-                    verificationcode = newVerificationCode;
+                    veRiFiCationCode = newVerificationCode;
                   },
                   keyboardType: TextInputType.text,
-                  style: TextStyle(fontSize: 10),
+                  style: const TextStyle(fontSize: 10),
                   decoration: InputDecoration(
                       labelText: 'Verification Code',
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10))),
                 ),
               ),
-              SizedBox(height: 30),
-              Container(
-                child: Stack(
-                  children: [
+              const SizedBox(height: 30),
                     Padding(
-                        padding: EdgeInsets.only(left: 2),
+                        padding: const EdgeInsets.only(left: 2),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.white,
                             backgroundColor: Colors.blue, // foreground
                           ),
-                          child: Text('           Register           ',
+                          child: const Text('           Register           ',
                               style: TextStyle(fontSize: 30)),
                           onPressed: () {
                             Navigator.pop(context);
                           },
                         ))
-                  ],
-                ),
-              ),
             ],
           ),
         ),

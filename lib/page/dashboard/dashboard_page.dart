@@ -13,8 +13,8 @@ class _DashboardPageState extends State<DashboardPage> {
     return Scaffold(
       body: Container(
         width: double.maxFinite,
-        padding: EdgeInsets.symmetric(vertical: 57),
-        child: Column(
+        padding: const EdgeInsets.symmetric(vertical: 200),
+        child: const Column(
           children: [
             Spacer(
               flex: 44,
@@ -29,7 +29,7 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             Spacer(
               flex: 55,
-            ),
+            )
           ],
         ),
       ),

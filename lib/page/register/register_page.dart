@@ -8,9 +8,9 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
-  String yourname = "";
+  String yourName = "";
   String email = "";
-  String yourpass = "";
+  String yourPass = "";
 
   @override
   Widget build(BuildContext context) {
@@ -18,20 +18,18 @@ class _RegisterPageState extends State<RegisterPage> {
       resizeToAvoidBottomInset: false,
       body: Container(
         width: double.maxFinite,
-        padding: EdgeInsets.symmetric(horizontal: 35, vertical: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Register",
+            const Text("Register",
                 style: TextStyle(
                     color: Colors.blue,
                     fontSize: 32,
-                    fontFamily: 'Inter',
                     fontWeight: FontWeight.w700)),
-            SizedBox(height: 10),
-            Container(
-                child: Padding(
+            const SizedBox(height: 10),
+            const Padding(
               padding: EdgeInsets.only(left: 1),
               child:
                   Text.rich(TextSpan(text: 'Create an ', children: <TextSpan>[
@@ -46,17 +44,17 @@ class _RegisterPageState extends State<RegisterPage> {
                     text: 'Maxpensel',
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700))
               ])),
-            )),
-            SizedBox(height: 40),
+            ),
+            const SizedBox(height: 40),
             Padding(
-              padding: EdgeInsets.only(left: 1),
+              padding: const EdgeInsets.only(left: 1),
               child: TextField(
                 onChanged: (newEmail) {
                   print(newEmail);
                   email = newEmail;
                 },
                 keyboardType: TextInputType.text,
-                style: TextStyle(fontSize: 10),
+                style: const TextStyle(fontSize: 10),
                 decoration: InputDecoration(
                     prefixIcon: Image.asset("assets/images/img_a.png"),
                     labelText: 'Email',
@@ -64,16 +62,16 @@ class _RegisterPageState extends State<RegisterPage> {
                         borderRadius: BorderRadius.circular(10))),
               ),
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             Padding(
-              padding: EdgeInsets.only(left: 1),
+              padding: const EdgeInsets.only(left: 1),
               child: TextField(
-                onChanged: (newYourname) {
-                  print(newYourname);
-                  yourname = newYourname;
+                onChanged: (newYourName) {
+                  print(newYourName);
+                  yourName = newYourName;
                 },
                 keyboardType: TextInputType.text,
-                style: TextStyle(fontSize: 10),
+                style: const TextStyle(fontSize: 10),
                 decoration: InputDecoration(
                     prefixIcon: Image.asset("assets/images/img_Vector.png"),
                     labelText: 'Your Name',
@@ -81,43 +79,36 @@ class _RegisterPageState extends State<RegisterPage> {
                         borderRadius: BorderRadius.circular(10))),
               ),
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             Padding(
-                padding: EdgeInsets.only(left: 1),
+                padding: const EdgeInsets.only(left: 1),
                 child: TextField(
-                    onChanged: (newYoupass) {
-                      print(newYoupass);
-                      yourpass = newYoupass;
+                    onChanged: (newYouPass) {
+                      print(newYouPass);
+                      yourPass = newYouPass;
                     },
                     keyboardType: TextInputType.text,
-                    style: TextStyle(fontSize: 10),
+                    style: const TextStyle(fontSize: 10),
                     decoration: InputDecoration(
-                        prefixIcon: Image.asset("assets/images/img_password.png"),
+                        prefixIcon:
+                            Image.asset("assets/images/img_password.png"),
                         labelText: 'Your Password',
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10))))),
-            SizedBox(height: 30),
-            Container(
-              child: Stack(
-                children: [
-                  Padding(
-                      padding: EdgeInsets.only(left: 2),
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.blue, // background
-                          onPrimary: Colors.white, // foreground
-                        ),
-                        child: Text(
-                          '           Register           ',
-                          style: TextStyle(
-                              fontSize: 30)),
-                        onPressed: () {},))
-                ],
-              ),
-            ),
-            SizedBox(height: 30),
-            Container(
-                child: Padding(
+            const SizedBox(height: 30),
+            Padding(
+                padding: const EdgeInsets.only(left: 2),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.blue, // foreground
+                  ),
+                  child: const Text('           Register           ',
+                      style: TextStyle(fontSize: 30)),
+                  onPressed: () {},
+                )),
+            const SizedBox(height: 30),
+            const Padding(
               padding: EdgeInsets.only(left: 50),
               child: Text.rich(
                 TextSpan(
@@ -133,7 +124,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   ],
                 ),
               ),
-            )),
+            ),
           ],
         ),
       ),

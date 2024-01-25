@@ -15,24 +15,22 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
     return Scaffold(
       body: Container(
         width: double.maxFinite,
-        padding: EdgeInsets.symmetric(horizontal: 35, vertical: 110),
+        padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 110),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Forgot Password",
+            const Text("Forgot Password",
                 style: TextStyle(
                     color: Colors.blue,
                     fontSize: 32,
                     fontWeight: FontWeight.w700)),
-            SizedBox(height: 10),
-            Container(
-              child: Padding(
+            const SizedBox(height: 10),
+             const Padding(
                 padding: EdgeInsets.only(left: 1),
                 child: Text("Recover you password if you have  "
                     "             forgot the password!"),
               ),
-            ),
-            SizedBox(height: 40),
+            SizedBox(height: 100),
             Padding(
               padding: EdgeInsets.only(left: 1),
               child: TextField(
@@ -50,24 +48,17 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                         borderRadius: BorderRadius.circular(10))),
               ),
             ),
-            SizedBox(height: 30),
-            Container(
-              child: Stack(
-                children: [
-                  Padding(
-                      padding: EdgeInsets.only(left: 2),
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.blue, // background
-                          onPrimary: Colors.white, // foreground
-                        ),
-                        child: Text('           Submit           ',
-                            style: TextStyle(fontSize: 30)),
-                        onPressed: () {},
-                      ))
-                ],
-              ),
-            ),
+            const SizedBox(height: 30),
+                Padding(
+                    padding: const EdgeInsets.only(left: 2),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        foregroundColor: Colors.white, backgroundColor: Colors.blue, // foreground
+                      ),
+                      child: const Text('           Submit           ',
+                          style: TextStyle(fontSize: 30)),
+                      onPressed: () {},
+                    ))
           ],
         ),
       ),
